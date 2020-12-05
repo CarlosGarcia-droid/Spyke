@@ -1,9 +1,8 @@
 const express = require('express');
+const peticionesRoutes = require('./routes/users');
 const app = express();
 
-//app.use(require('./routes/users'));
-app.get('/', (req, res) => {
-    res.json('Hola');
-});
+
+app.use('/peticiones', peticionesRoutes); 
 
 module.exports = app;

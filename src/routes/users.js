@@ -1,11 +1,8 @@
 const express = require('express');
-const router = express.Router();
+const api = express.Router();
 
-router.get('/api/users', function(req, res) {    
-    res.json('User list');
+api.get('/users', (req, res) => {
+    res.json('Hola loko');
 });
 
-
-router.get('/', function(req, res) {
-    res.json("Pagina principal");
-});
+module.exports = api; 
